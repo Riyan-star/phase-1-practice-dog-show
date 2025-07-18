@@ -3,40 +3,52 @@
   <head>
     <meta charset="utf-8" />
     <title>WKC Dog Show</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-    <script src="./src/index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="./assets/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class='main flex'>
-      <h1 class='padding margin'>Westminster Kennel Club Dog Show</h1>
+    <div class="container py-4">
+      <h1 class="text-center mb-4">Westminster Kennel Club Dog Show</h1>
 
-      <div class="margin flex">
-        <h4 class='center'>Edit Existing Dog</h4>
-        <form id='dog-form' class="padding margin border-round border-grey">
-          <input type="text" name="name" placeholder="dog's name" value="" />
-          <input type="text" name="breed" placeholder="dog's breed" value="" />
-          <input type="text" name="sex" placeholder="dog's sex" value="" />
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Edit Existing Dog</h4>
+          <form id="dog-form" class="border p-3 rounded bg-light">
+            <div class="form-group">
+              <input type="text" name="name" class="form-control mb-2" placeholder="dog's name" />
+              <input type="text" name="breed" class="form-control mb-2" placeholder="dog's breed" />
+              <input type="text" name="sex" class="form-control mb-2" placeholder="dog's sex" />
+              <input type="submit" class="btn btn-success" value="Submit" />
+            </div>
+          </form>
+        </div>
 
-      <div class="margin flex">
-        <h4 class='center'>Registered Dogs</h4>
-        <table class='margin' border="1">
-          <thead class='blue'>
-            <tr class='padding'>
-              <th class='padding center'>Name</th>
-              <th class='padding center'>Breed</th>
-              <th class='padding center'>Sex</th>
-              <th class='padding center'>Edit Dog</th>
-            </tr>
-          </thead>
-          <tbody id="table-body">
-          </tbody>
-        </table>
+        <div class="col-md-6">
+          <h4>Registered Dogs</h4>
+          <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Name</th>
+                <th>Breed</th>
+                <th>Sex</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <!-- Dog rows go here -->
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
+
+    <script src="./src/index.js"></script>
   </body>
 </html>
